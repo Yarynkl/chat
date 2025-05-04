@@ -10,7 +10,7 @@ const server = http.createServer((req,res)=>{
         case '/script.js': return res.end(scriptFile)
         case '/style.css': return res.end(styleFile)
     }
-    if(req.url === '/'){
+    if(req.url == '404'){
         return res.end(indexHtmlFile)
     }
     res.statusCode = 404;
